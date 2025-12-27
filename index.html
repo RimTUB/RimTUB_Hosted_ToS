@@ -1,32 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Docs</title>
-
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 16px;
-      line-height: 1.6;
-    }
-  </style>
+  <meta http-equiv="refresh" content="0; url=/ru">
+  <script>
+    location.replace('/ru');
+  </script>
 </head>
 <body>
-  <div id="content"></div>
-
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-  <script>
-    const lang = location.pathname.startsWith('/en') ? 'en' : 'ru';
-
-    fetch(`/${lang}.md`)
-      .then(r => r.text())
-      .then(md => {
-        document.getElementById('content').innerHTML = marked.parse(md);
-      });
-  </script>
 </body>
 </html>
